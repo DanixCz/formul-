@@ -1,66 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="icon" href="/images/DGS.svg" type="image/svg+xml">
-    <link href="style/style.css" rel="stylesheet">
+    <title>Registrace</title>
+
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" defer></script>
 </head>
 <body>
+    <main>
+        <section>
+            <div class="form">
+                <div class="form-header">
+                    <img src="/images/apexlogo.png" alt="LogoApex">
+                    <h2>Create an account</h2>
+                </div>
+                <form>
+                    <div class="form-main">
+                        <div class="form-main-inputs">
+                            <div class="form-main-inputs-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                </svg>
+                                <label for="name">Username</label>
+                            </div>
+                            <input type="text" placeholder="Username (alphanumeric only)">
+                        </div>
+                        <div class="form-main-inputs">
+                            <div class="form-main-inputs-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                </svg>
+                                <label for="name">Password</label>
+                            </div>
+                            <input type="text" placeholder="Enter your password (min 6 characters)">
+                        </div>
+                        <div class="form-main-inputs">
+                            <div class="form-main-inputs-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                </svg>
+                                <label for="name">Confirm Password</label>
+                            </div>
+                            <input type="text" placeholder="Confirm your password">
+                        </div>
+                    </div>
+                    <div class="form-control">
 
-<div class="login-wrapper">
-    <div class="fade-overlay"></div>
+                    </div>
+                    <div class="form-buttons">
 
-    <a href="/auth/login?" class="back-link"><i class="fa-solid fa-arrow-left"></i>Back to Login</a>
-
-    <div class="login-card">
-        <div class="login-header">
-            <img src="/images/apexlogo.png" alt="Logo" class="dgs-logo" style="margin: 0 auto 1rem;">
-            <h1 class="login-title">Create an account</h1>
-        </div>
-
-        
-        <form action="/auth/register" id="registerForm" method="post">
-            <input name="utf8" type="hidden" value="&#x2713;" />
-            <input type="hidden" name="authenticity_token" value="h0E6/Ix+f49HKu5t77Vua0zAPxLEFcMnxD4oGApmpZ95a2vwf1AG0SaVS78KBRZaQ0ADctWhuh7vssxAhehJ1g==" />
-
-            <div class="login-form-group">
-                <label for="username" class="login-label"><i class="fa-solid fa-user"></i>Username</label>
-                <input type="text" class="login-input" id="username" name="username" placeholder="Username (alphanumeric only)" required autocomplete="username" pattern="[a-zA-Z0-9]+" value="">
+                    </div>       
+                </form>
             </div>
-
-            <div class="login-form-group">
-                <label for="password" class="login-label"><i class="fa-solid fa-lock"></i>Password</label>
-                <input type="password" class="login-input" id="password" name="password" placeholder="Enter your password (min 6 characters)" required autocomplete="new-password">
-            </div>
-
-            <div class="login-form-group">
-                <label for="password2" class="login-label"><i class="fa-solid fa-lock"></i>Confirm Password</label>
-                <input type="password" class="login-input" id="password2" name="password2" placeholder="Confirm your password" required autocomplete="new-password">
-            </div>
-
-            <div class="checkbox-group">
-                <input type="checkbox" id="tos" name="tos" required>
-                <label for="tos">I agree with <a href="/privacy-policy.php" target="_blank">terms of service and privacy policy</a></label>
-            </div>
-
-            <div class="login-form-group" style="display: flex; justify-content: center; margin: 1rem 0;">
-                <div class="cf-turnstile" data-sitekey="0x4AAAAAAAi2s2jBCPHLeHq0" data-callback="onTurnstileSuccess"></div>
-            </div>
-
-            <button type="submit" name="commit" value="Submit" class="login-button" id="submitButton" disabled><i class="fa-solid fa-user-plus"></i>Create account</button>
-        </form>
-        <div class="login-footer">
-            <div class="login-footer-grid single-card">
-                
-                <a href="/auth/login" class="login-footer-card">
-                    <span class="login-footer-text">Already have an account?</span>
-                    <span class="login-footer-link-text">Sign in</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
+        </section>
+    </main>
+</body>
 </html>
