@@ -1,3 +1,6 @@
+<?php
+// filepath: 
+?>
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -16,40 +19,40 @@
                     <img src="/images/apexlogo.png" alt="LogoApex">
                     <h2>Create an account</h2>
                 </div>
-                <form>
+                <form action="register.php" method="post" novalidate>
                     <div class="form-main">
                         <div class="form-main-inputs">
                             <div class="form-main-inputs-label">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                                 </svg>
-                                <label for="name">Username</label>
+                                <label for="username">Username</label>
                             </div>
-                            <input type="text" placeholder="Username (alphanumeric only)">
+                            <input id="username" name="username" type="text" placeholder="Username (alphanumeric only)" required>
                         </div>
                         <div class="form-main-inputs">
                             <div class="form-main-inputs-label">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
                                 </svg>
-                                <label for="name">Password</label>
+                                <label for="password">Password</label>
                             </div>
-                            <input type="text" placeholder="Enter your password (min 6 characters)">
+                            <input id="password" name="password" type="password" placeholder="Enter your password (min 6 characters)" required>
                         </div>
                         <div class="form-main-inputs">
                             <div class="form-main-inputs-label">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
                                 </svg>
-                                <label for="name">Confirm Password</label>
+                                <label for="password_confirm">Confirm Password</label>
                             </div>
-                            <input type="text" placeholder="Confirm your password">
+                            <input id="password_confirm" name="password_confirm" type="password" placeholder="Confirm your password" required>
                         </div>
                     </div>
                     <div class="form-control">
-                        <input type="checkbox" name="checkbox" id="terms">
-                        <label for="checkbox">
-                        I agree with  
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <label for="terms">
+                        I agree with
                         <a href="#">terms of service and privacy policy</a>
                     </label>
                     </div>
@@ -60,14 +63,14 @@
                             </svg>
                             Create Account
                         </button>
-                    </div>       
+                    </div>
                 </form>
                 <div class="form-footer">
-                    <a href="#">
+                    <a href="login.php">
                         <span>Already have an account?</span>
                         Sign in
                         </a>
-                </div> 
+                </div>
             </div>
         </section>
     </main>
